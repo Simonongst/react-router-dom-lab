@@ -32,7 +32,7 @@ const App = () => {
           <Route path='/' element={<main><h1>Post Office</h1></main>}/>
           <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes}/>}/>
           <Route path='/new-mailbox' element={<MailboxForm addBox={addBox}/>}/>
-          <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes}/>}/>
+          <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes} letters={letters}/>}/>
           <Route path='/new-letter' element={<LetterForm addLetter={addLetter} mailboxes={mailboxes}/>}/>
           <Route path='*' element={<h1>Oops! We couldn't find that page</h1>}/>
       </Routes>
