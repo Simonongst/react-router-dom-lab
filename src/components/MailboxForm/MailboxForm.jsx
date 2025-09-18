@@ -10,13 +10,14 @@ const MailboxForm = ({ addBox }) => {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.value]: e.target.value });
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         addBox(formData);
-        setFormData({ boxSize: "", boxOwner: ""});
+        setFormData({ boxSize: "Small", boxOwner: ""});
         navigate('/mailboxes');
     };
 
@@ -48,7 +49,7 @@ const MailboxForm = ({ addBox }) => {
           <option value="Large">Large</option>
         </select>
 
-        <button type="submit">Create Mailbox</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   )
