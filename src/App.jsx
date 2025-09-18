@@ -24,10 +24,10 @@ const App = () => {
       <NavBar />
       <Routes>
           <Route path='/' element={<main><h1>Post Office</h1></main>}/>
-          <Route path='/mailboxes' element={<main><h1><MailboxList /></h1></main>}/>
-          <Route path='/new-mailbox' element={<main><h1><MailboxForm addBox={addBox}/></h1></main>}/>
-          <Route path='/mailboxes/:mailboxId' element={<main><h1><MailboxDetails /></h1></main>}/>
-          <Route path='*' element={<main><h1>Oops! We couldn’t find that page</h1></main>}/>
+          <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes}/>}/>
+          <Route path='/new-mailbox' element={<MailboxForm addBox={addBox}/>}/>
+          <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes}/>}/>
+          <Route path='*' element={<h1>Oops! We couldn't find that page</h1>}/>
       </Routes>
     </>
   )
