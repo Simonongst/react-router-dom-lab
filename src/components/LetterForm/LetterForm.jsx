@@ -22,7 +22,7 @@ const LetterForm = ({ addLetter, mailboxes }) => {
             value={mailboxId}
             onChange={(e) => setMailboxId(e.target.value)}
           >
-            {mailboxes.map((_id) => (
+            {mailboxes.map(({_id}) => (
               <option key={_id} value={_id}>
                 Mailbox {_id}
               </option>

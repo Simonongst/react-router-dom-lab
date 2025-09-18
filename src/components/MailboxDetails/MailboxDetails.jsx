@@ -18,7 +18,7 @@ const MailboxDetails = (props) => {
       <p>Boxholder: {selectedBox.boxOwner}</p>
       <p>Box Size: {selectedBox.boxSize}</p>
 
-      {selectedLetters.length === 0 &&
+      {selectedLetters.length === 0 ||
         selectedLetters.map((letter, index) => (
           <div key={index}>
             <h3>Letters</h3>
