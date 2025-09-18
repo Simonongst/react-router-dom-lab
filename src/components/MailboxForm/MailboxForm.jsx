@@ -1,8 +1,9 @@
-import React from 'react'
 
 const MailboxForm = () => {
   return (
-    <div>MailboxForm</div>
+    <>
+        <h1>MailboxForm</h1>
+    </>
   )
 }
 
